@@ -22,7 +22,9 @@
 - asistencia = 10%
 - investigación = 30%
 
-Al final deberá mostrar los datos del alumno, nombre, carnet y nota final. **EJERCICIO 3:**  
+Al final deberá mostrar los datos del alumno, nombre, carnet y nota final. 
+
+**EJERCICIO 3:**  
 
 |**CATEGORIA** |**AUMENTO** |
 | - | - |
