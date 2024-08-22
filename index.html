@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACTIVIDAD 2</title>
+  </head>
+  <body>
+    <h1>ACTIVIDAD 2: GUIA ESTRUCTURAS DE CONTROL JAVASCRIPT</h1>
+    <h3>By: Guillermo Alejandro Meléndez Santamaria</h3>
+    <hr />
+    <div id="problem1">
+      <h2>EJERCICIO 1:</h2>
+      <p>
+        Crear una función que en base a la edad que ingreso el usuario devolver
+        un mensaje si la persona es mayor de edad o no. Utilizar para la
+        condición el operador ternario.
+      </p>
+
+      <input type="number" id="ageInput" placeholder="Ingresa tu edad" />
+      <button onclick="checkAge()">Checkear edad</button>
+      <br /><br />
+      <div id="result">Output:</div>
+    </div>
+
+    <div id="problem2">
+      <h2>EJERCICIO 2:</h2>
+      <p>
+        Crear una función que determine la nota final de un alumno, la cual
+        depende de lo siguiente:
+      </p>
+      <ul>
+        <li>Examen = 20%</li>
+        <li>Tareas = 40%</li>
+        <li>Asistencia = 10%</li>
+        <li>Investigación = 30%</li>
+      </ul>
+      <p>
+        Al final deberá mostrar los datos del alumno, nombre, carnet y nota
+        final.
+      </p>
+      <form>
+        <input
+          type="text"
+          id="name"
+          placeholder="Nombre del estudiante"
+          required
+        /><br />
+        <input
+          type="text"
+          id="studentId"
+          placeholder="ID del estudiante"
+          required
+        /><br />
+        <input
+          type="number"
+          id="exam"
+          placeholder="Nota de examen"
+          required
+        /><br />
+        <input
+          type="number"
+          id="assignments"
+          placeholder="Nota de Tareas"
+          required
+        /><br />
+        <input
+          type="number"
+          id="attendance"
+          placeholder="Nota de asistencia"
+          required
+        /><br />
+        <input
+          type="number"
+          id="research"
+          placeholder="Nota de investigación"
+          required
+        /><br />
+        <br />
+        <button type="button" onclick="calculateFinalGrade()">
+          Calcular Nota Final
+        </button>
+      </form>
+      <br />
+      <div id="output">Output:</div>
+    </div>
+
+    <div id="problem3">
+      <h2>EJERCICIO 3:</h2>
+
+      <table>
+        <tr>
+          <th>CATEGORIA</th>
+          <th>AUMENTO</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>20%</td>
+        </tr>
+      </table>
+
+      <p>
+        Calcular el aumento de trabajador tomando en cuenta la tabla de
+        categorías de aumento. Para este ejercicio deberá de asignar las
+        siguientes variables: nombre, salario, categoría y aumento. Deberá
+        demostrar los datos del empleado y el aumento salarial.
+      </p>
+
+      <form id="formulario">
+        <label for="employeeName">Nombre del Empleado:</label><br />
+        <input type="text" id="employeeName" name="employeeName" /><br />
+        <label for="salary">Salario Original:</label><br />
+        <input type="number" id="salary" name="salary" /><br />
+        <label for="category">Categoría:</label><br />
+        <select id="category" name="category">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option></select
+        ><br /><br />
+        <button type="button" onclick="calculateSalaryIncrease()">
+          Calcular aumento
+        </button>
+      </form>
+      <br />
+
+      <div id="increaseResult">Output:</div>
+    </div>
+
+    <div id="problem4">
+      <h2>EJERCICIO 4:</h2>
+
+      <p>
+        Crear una función que en base a 2 números enteros que ingrese el
+        usuario, calcular cual número es el mayor y devolverlo.
+      </p>
+
+      <form id="formulario">
+        <label for="number1">Ingrese el primer número:</label><br />
+        <input type="number" id="number1" name="number1" /><br />
+        <label for="number2">Ingrese el segundo número:</label><br />
+        <input type="number" id="number2" name="number2" /><br /><br />
+        <button type="button" onclick=" compareNumbers()">
+          Comparar numeros
+        </button>
+      </form>
+      <br />
+      <div id="numberResult">Output:</div>
+    </div>
+
+    <div id="problem5">
+      <h2>EJERCICIO 5:</h2>
+
+      <p>
+        Realizar una función para una tienda de coches en donde se deberá
+        calcular: Si el coche a la venta es un FORD FIESTA, aplicar un 5% de
+        descuento en la compra. Si el coche a la venta es un FORD FOCUS, el
+        descuento será del 10% y si es un FORD ESCAPE el descuento será del 20%.
+        Mostrar en html el coche seleccionado y el descuento que se aplicara en
+        base a lo que selecciono el usuario.
+      </p>
+
+      <form id="carForm">
+        <label for="car">Seleccione un modelo de coche:</label><br />
+        <br />
+        <select id="car" name="car">
+          <option value="Ford Fiesta">Ford Fiesta</option>
+          <option value="Ford Focus">Ford Focus</option>
+          <option value="Ford Escape">Ford Escape</option></select
+        ><br /><br />
+
+        <button type="button" onclick="calculateDiscount()">
+          Calcular descuento
+        </button>
+      </form>
+      <br />
+      <div id="discountResult">Output:</div>
+    </div>
+
+    <div id="problem6">
+      <h2>EJERCICIO 6:</h2>
+
+      <p>
+        Crear una Función para calcular el descuento en viajes turísticos
+        tomando en cuenta lo siguiente: Si el usuario introduce como origen la
+        ciudad de Palma y como destino La costa del Sol, el descuento será de
+        5%, si el destino es Panchimalco el descuento será del 10% y si el
+        destino es Puerto el Triunfo el descuento será del 15%.
+      </p>
+
+      <form id="travelForm">
+        <label for="origin">Ingresa tu ciudad de origen:</label><br />
+        <select id="origin" name="origin">
+          <option value="Ciudad de Palma">Ciudad de Palma</option>
+          <option value="Otra ciudad">Otra ciudad</option></select
+        ><br /><br />
+
+        <label for="destination">Selecciona tu destino:</label><br />
+        <select id="destination" name="destination">
+          <option value="La costa del Sol">La costa del Sol</option>
+          <option value="Panchimalco">Panchimalco</option>
+          <option value="Puerto el Triunfo">Puerto el Triunfo</option></select
+        ><br /><br />
+
+        <button type="button" onclick="calculateTravelDiscount()">
+          Calcular descuento
+        </button>
+      </form>
+
+      <br />
+      <div id="destinationResult">Output:</div>
+    </div>
+
+    <div id="problem7">
+      <h2>EJERCICIO 7:</h2>
+
+      <p>
+        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+      </p>
+
+      <ul>
+        <li>La cantidad de valores negativos ingresados.</li>
+        <li>La cantidad de valores positivos ingresados.</li>
+        <li>La cantidad de múltiplos de 15.</li>
+        <li>El valor acumulado de los números ingresados que son pares.</li>
+      </ul>
+
+      <form id="numberForm">
+        <p>Enter 10 numbers:</p>
+        <input type="number" id="number11" /><br />
+        <input type="number" id="number12" /><br />
+        <input type="number" id="number13" /><br />
+        <input type="number" id="number14" /><br />
+        <input type="number" id="number15" /><br />
+        <input type="number" id="number16" /><br />
+        <input type="number" id="number17" /><br />
+        <input type="number" id="number18" /><br />
+        <input type="number" id="number19" /><br />
+        <input type="number" id="number20""><br /><br />
+
+        <button type="button" onclick="analyzeNumbers()">
+          Analizar numeros
+        </button>
+      </form>
+      <br />
+      <div id="numberCountResult">Output:</div>
+    </div>
+
+    <div id="problem8">
+      <h2>EJERCICIO 8:</h2>
+
+      <p>
+        Escriba un programa que muestre la tabla de multiplicar del 1 al 10 del
+        número ingresado por el usuario.
+      </p>
+
+      <form id="multiplicationForm">
+        <label for="multnumber">Ingresa el numero:</label><br />
+        <input type="number" id="multnumber" /><br /><br />
+
+        <button type="button" onclick="generateMultiplicationTable()">
+          Generar Tabla
+        </button>
+      </form>
+
+      <br />
+
+      <div id="multresult">Output:</div>
+    </div>
+
+    <div id="problem9">
+      <h2>EJERCICIO 9:</h2>
+
+      <p>
+        Crear programa donde se introduce una temperatura en Celsius y salga el
+        resultado en Fahrenheit, una vez teniendo la temperatura en Fahrenheit
+        deberá devolver lo siguiente:
+      </p>
+      <ul>
+        <li>Si ºF está entre 14 y 32, sale la frase "Temperatura baja"</li>
+        <li>Si ºF está entre 32 y 68, sale la frase "Temperatura adecuada"</li>
+        <li>Si ºF está entre 68 y 96, sale la frase "Temperatura alta"</li>
+        <li>
+          Si no está entre ningún caso anterior la frase "Temperatura
+          desconocida"
+        </li>
+      </ul>
+      <form id="temperatureForm">
+        <label for="celsius">Ingresa la temperatura en Celsius:</label><br />
+        <input type="number" id="celsius" name="celsius" /><br /><br />
+
+        <button type="button" onclick="convertTemperature()">
+          Convertir a Fahrenheit
+        </button>
+      </form>
+
+      <br />
+      <div id="tempresult">Output:</div>
+    </div>
+
+    <div id="problem10">
+      <h2>EJERCICIO 10:</h2>
+
+      <p>Se cuenta con la siguiente información:</p>
+      <ul>
+        <li>Las edades de 5 estudiantes del turno mañana.</li>
+        <li>Las edades de 6 estudiantes del turno tarde.</li>
+        <li>Las edades de 11 estudiantes del turno noche.</li>
+      </ul>
+      Nota: Las edades de cada estudiante se deberán ingresar por la web. Lo que
+      queremos devolver:
+      <ul>
+        <li>
+          Obtener el promedio de las edades de cada turno (tres promedios).
+        </li>
+        <li>Imprimir dichos promedios (promedio de cada turno).</li>
+        <li>
+          Mostrar por pantalla un mensaje que indique cuál de los tres turnos
+          tiene un promedio de edades mayor.
+        </li>
+      </ul>
+
+      <form id="ageForm">
+        <h2>Turno de la mañana (Edad de 5 estudiantes)</h2>
+
+        <input type="number" id="morning1" name="morningAge" /><br />
+        <input type="number" id="morning2" name="morningAge" /><br />
+        <input type="number" id="morning3" name="morningAge" /><br />
+        <input type="number" id="morning4" name="morningAge" /><br />
+        <input type="number" id="morning5" name="morningAge" /><br />
+
+        <h2>Turno de la tarde (Edad de 6 estudiantes)</h2>
+        <input type="number" id="afternoon1" name="afternoonAge" /><br />
+        <input type="number" id="afternoon2" name="afternoonAge" /><br />
+        <input type="number" id="afternoon3" name="afternoonAge" /><br />
+        <input type="number" id="afternoon4" name="afternoonAge" /><br />
+        <input type="number" id="afternoon5" name="afternoonAge" /><br />
+        <input type="number" id="afternoon6" name="afternoonAge" /><br />
+
+        <h2>Turno de la noche (Edad de 11 estudiantes)</h2>
+        <input type="number" id="night1" name="nightAge" /><br />
+        <input type="number" id="night2" name="nightAge" /><br />
+        <input type="number" id="night3" name="nightAge" /><br />
+        <input type="number" id="night4" name="nightAge" /><br />
+        <input type="number" id="night5" name="nightAge" /><br />
+        <input type="number" id="night6" name="nightAge" /><br />
+        <input type="number" id="night7" name="nightAge" /><br />
+        <input type="number" id="night8" name="nightAge" /><br />
+        <input type="number" id="night9" name="nightAge" /><br />
+        <input type="number" id="night10" name="nightAge" /><br />
+        <input type="number" id="night11" name="nightAge" /><br /><br />
+
+        <button type="button" onclick="calculateAverages()">
+          Calcular Promedio
+        </button>
+      </form>
+      <br />
+      <div id="averageResult">Output:</div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
